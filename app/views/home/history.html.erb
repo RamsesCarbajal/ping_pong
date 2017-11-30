@@ -2,11 +2,18 @@
 
 
 <table>
+  <thead>
+    <tr>
+      <th>email</th>
+      <th>score</th>
+    </tr>
+  </thead>
   <tbody>
     <% @history.each do |rank| %>
-      <td>rank_id</td>
-      <td><%= rank.id %></td>
+      <tr>
+        <td><%= rank.user.email%></td>
+        <td><%= rank.score %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
-<%= image_tag('history.png') %>

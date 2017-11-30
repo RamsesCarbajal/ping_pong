@@ -1,0 +1,27 @@
+<h1 class='page-header'>New Game</h1>
+<%= form_for @game, :url => {:action => "match"}, :method => "post" do |f| %>
+    
+    <p>
+      <%= "Player One" %>
+      <%= f.text_field :player_one %>
+    </p>
+
+    <p>
+      <%= "Player One Score" %>
+      <%= f.text_field :score_one %>
+    </p>
+
+    <p>
+      <%= "Player two" %>
+      <%= f.text_field :player_two %>
+    </p>
+
+    <p>
+      <%= "Player two Score" %>
+      <%= f.text_field :score_two %>
+    </p>
+
+
+
+    <%= f.submit "Create" %>
+<% end %>

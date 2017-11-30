@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   end
 
   def history
-puts User.last.inspect
     @history = History.all
   end
 
