@@ -1,5 +1,12 @@
 <h1 class='page-header'>History</h1>
 
-<div class="alert alert-warning" role="alert">This is a sample page. Replace link in the header with your own.</div>
 
+<table>
+  <tbody>
+    <% @history.each do |rank| %>
+      <td>rank_id</td>
+      <td><%= rank.id %></td>
+    <% end %>
+  </tbody>
+</table>
 <%= image_tag('history.png') %>
