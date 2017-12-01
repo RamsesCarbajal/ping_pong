@@ -4,3 +4,21 @@
 <div class="alert alert-warning" role="alert">This is a sample page.</div>
 
 <%= image_tag('leaderboard.png') %>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>email</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @history.each do |rank| %>
+      <tr>
+        <td><%= rank.user.id%></td>
+        <td><%= rank.user.email%></td>
+        <td><%= rank.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

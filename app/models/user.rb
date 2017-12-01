@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :trackable, :validatable
-  after_save :create_history
+  after_create :create_history
 
   def create_history
     history = History.new

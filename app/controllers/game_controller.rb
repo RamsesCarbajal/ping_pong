@@ -10,7 +10,7 @@ class GameController < ApplicationController
      
     validate_match
     analize_match 
-    redirect_to :controller => 'home', :action => 'history' && return
+    redirect_to :controller => 'home', :action => 'history'
   end
   
   def index
