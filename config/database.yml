@@ -20,6 +20,14 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+  #production:
+  #<<: *default
+  #database: db/production.sqlite3
 production:
-  <<: *default
-  database: db/production.sqlite3
+  < adapter: postgresql
+  statement_limit: 200
+  host: ec2-174-129-195-73.compute-1.amazonaws.com
+  port: 5432
+  database: d18mvi648kvp4g
+  username: azwdmaklbtctep
+  password: a66cd9e142e5ff4838c5d085d72e9dabdd1660615e02efc6164876233273b942
